@@ -1,0 +1,181 @@
+{
+  "simulation": {
+    "base_mutation_rate": 0.001,
+    "base_max_generations": 20,
+    "base_branches_per_node": 5,
+    "base_pruning_threshold": 20,
+    "base_population_size": 10000,
+    "complexity_scaling": true,
+    "resource_scaling": true,
+    "adaptive_parameters": {
+      "mutation_rate_range": [0.0001, 0.01],
+      "generation_range": [5, 100],
+      "population_range": [1000, 100000]
+    }
+  },
+  "ai_models": {
+    "auto_scale_dimensions": true,
+    "base_hidden_dim": 128,
+    "base_num_layers": 3,
+    "memory_efficient_mode": false,
+    "gpu_optimization": true,
+    "model_limits": {
+      "max_hidden_dim": 1024,
+      "max_layers": 12,
+      "min_hidden_dim": 32,
+      "min_layers": 2
+    },
+    "training": {
+      "base_learning_rate": 0.001,
+      "base_batch_size": 32,
+      "base_dropout": 0.1,
+      "adaptive_lr": true,
+      "adaptive_batch_size": true
+    }
+  },
+  "visualization": {
+    "adaptive_resolution": true,
+    "base_width": 800,
+    "base_height": 600,
+    "performance_mode": false,
+    "quality_settings": {
+      "high_quality": {
+        "max_residues": 1000,
+        "animation_fps": 60,
+        "color_resolution": 512
+      },
+      "medium_quality": {
+        "max_residues": 500,
+        "animation_fps": 30,
+        "color_resolution": 256
+      },
+      "low_quality": {
+        "max_residues": 200,
+        "animation_fps": 15,
+        "color_resolution": 128
+      }
+    }
+  },
+  "performance": {
+    "auto_detect_workers": true,
+    "memory_monitoring": true,
+    "adaptive_chunking": true,
+    "fallback_enabled": true,
+    "limits": {
+      "max_memory_usage_percent": 80,
+      "max_gpu_memory_percent": 90,
+      "timeout_multiplier": 1.0,
+      "cache_size_multiplier": 1.0
+    },
+    "optimization": {
+      "enable_garbage_collection": true,
+      "clear_gpu_cache": true,
+      "use_memory_mapping": true,
+      "compress_data": true
+    }
+  },
+  "constants": {
+    "amino_acids": {
+      "standard": ["A", "R", "N", "D", "C", "Q", "E", "G", "H", "I", "L", "K", "M", "F", "P", "S", "T", "W", "Y", "V"],
+      "extended": ["A", "R", "N", "D", "C", "Q", "E", "G", "H", "I", "L", "K", "M", "F", "P", "S", "T", "W", "Y", "V", "X", "B", "Z", "J", "U", "O"]
+    },
+    "interaction_cutoffs": {
+      "precision_modes": {
+        "high": {
+          "hydrogen_bond": 2.8,
+          "hydrophobic": 3.6,
+          "electrostatic": 4.8
+        },
+        "standard": {
+          "hydrogen_bond": 3.5,
+          "hydrophobic": 4.5,
+          "electrostatic": 6.0
+        },
+        "low": {
+          "hydrogen_bond": 4.2,
+          "hydrophobic": 5.4,
+          "electrostatic": 7.2
+        }
+      }
+    },
+    "conservation_thresholds": {
+      "high_conservation": 0.8,
+      "medium_conservation": 0.5,
+      "low_conservation": 0.2,
+      "adaptive_scaling": true
+    },
+    "stability_thresholds": {
+      "strict": {
+        "destabilizing": -0.5,
+        "highly_destabilizing": -1.0,
+        "stabilizing": 0.3,
+        "highly_stabilizing": 0.8
+      },
+      "medium": {
+        "destabilizing": -0.8,
+        "highly_destabilizing": -1.5,
+        "stabilizing": 0.5,
+        "highly_stabilizing": 1.2
+      },
+      "lenient": {
+        "destabilizing": -1.2,
+        "highly_destabilizing": -2.0,
+        "stabilizing": 0.8,
+        "highly_stabilizing": 1.5
+      }
+    }
+  },
+  "file_paths": {
+    "data_dir": "data",
+    "output_dir": "output",
+    "cache_dir": "cache",
+    "logs_dir": "logs",
+    "config_dir": "config",
+    "temp_dir": "temp"
+  },
+  "api_urls": {
+    "alphafold_base": "https://alphafold.ebi.ac.uk/api/prediction/",
+    "alphafold_files": "https://alphafold.ebi.ac.uk/files/",
+    "uniprot_api": "https://rest.uniprot.org/",
+    "pdb_api": "https://data.rcsb.org/rest/v1/",
+    "timeout_seconds": 30,
+    "retry_attempts": 3
+  },
+  "memory_monitoring": {
+    "enabled": true,
+    "interval_seconds": 1.0,
+    "warning_threshold": 0.8,
+    "critical_threshold": 0.9,
+    "auto_optimization": true,
+    "alerts": {
+      "log_warnings": true,
+      "log_critical": true,
+      "auto_cleanup": true
+    }
+  },
+  "gpu_settings": {
+    "auto_detect": true,
+    "memory_fraction": 0.8,
+    "allow_growth": true,
+    "fallback_to_cpu": true,
+    "optimization": {
+      "use_mixed_precision": false,
+      "enable_cudnn_benchmark": true,
+      "clear_cache_frequency": 100
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_logging": true,
+    "console_logging": true,
+    "max_file_size_mb": 10,
+    "backup_count": 5
+  },
+  "experimental": {
+    "enable_advanced_features": false,
+    "use_experimental_algorithms": false,
+    "beta_optimizations": false,
+    "debug_mode": false
+  }
+}

@@ -1,0 +1,114 @@
+# Core dependencies for virus mutation simulation AI framework
+streamlit>=1.28.0
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+plotly>=5.15.0
+scipy>=1.11.0
+scikit-learn>=1.3.0
+
+# Bioinformatics and structural biology
+biopython>=1.81
+py3Dmol>=2.0.0
+stmol>=0.0.9
+biotite>=0.37.0
+mdanalysis>=2.5.0
+prody>=2.4.0
+
+# Deep Learning and AI with GPU support
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+transformers>=4.30.0
+sentence-transformers>=2.2.0
+accelerate>=0.20.0
+torch-geometric>=2.3.0
+
+# Bayesian optimization
+scikit-optimize>=0.9.0
+gpytorch>=1.11.0
+
+# Database and reporting
+reportlab>=4.0.0
+fpdf2>=2.7.0
+openpyxl>=3.1.0
+
+# Web framework and APIs
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+httpx>=0.24.0
+
+# Visualization and networks
+networkx>=3.1
+python-igraph>=0.10.0
+pyvis>=0.3.0
+bokeh>=3.2.0
+altair>=5.0.0
+dash>=2.14.0
+
+# 3D visualization and molecular graphics
+nglview>=3.0.0
+ipywidgets>=8.0.0
+
+# Scientific computing
+numba>=0.57.0
+joblib>=1.3.0
+dask>=2023.7.0
+
+# Statistical analysis
+statsmodels>=0.14.0
+pingouin>=0.5.0
+
+# Utilities and helpers
+requests>=2.31.0
+python-dateutil>=2.8.0
+tqdm>=4.65.0
+click>=8.1.0
+pyyaml>=6.0.0
+configparser>=5.3.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+
+# Performance monitoring
+memory-profiler>=0.61.0
+psutil>=5.9.0
+
+# File format support
+h5py>=3.9.0
+pyarrow>=12.0.0
+
+# Image processing
+Pillow>=10.0.0
+opencv-python>=4.8.0
+
+# Jupyter notebook support
+jupyter>=1.0.0
+ipython>=8.14.0
+
+# Configuration management
+python-dotenv>=1.0.0
+
+# Logging
+loguru>=0.7.0
+
+# Optional molecular dynamics
+# mdtraj>=1.9.0
+# pytraj>=2.0.0
+
+# Optional cloud support
+# boto3>=1.28.0
+# azure-storage-blob>=12.17.0
+
+# Note: Some packages like sqlite3 are built into Python
+# Note: Some specialized packages may require conda installation:
+# - rdkit-pypi>=2022.9.5
+# - pymol-open-source>=2.5.0
+# - alphafold>=2.3.0
+# - openmm>=8.0.0
+# - pdbfixer>=1.9
+# - modeller>=10.4
